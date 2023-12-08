@@ -1,0 +1,28 @@
+1.	cat > pets.txt
+		Dogs
+		Cats
+		Hamsters 
+	cat > packAnimals.txt
+		Horses
+		Camals
+		Donkeys
+	cat pets.txt packAnimals.txt > animals.txt
+	cat animals.txt
+	mv animals.txt humanFriends.txt
+
+2.	mkdir animalsDirectory
+	mv humanFriends.txt animalsDirectory/
+
+3.	sudo apt-key adv --keyserver pgp.mit.edu --recv-keys 3A79BD29
+	sudo su
+	cat > /etc/apt/sources.list.d/mysql.list
+	nano /etc/apt/sources.list.d/mysql.list
+		deb http://repo.mysql.com/apt/ubuntu/ bionic mysql-8.0
+	exit
+	wget -q -O - https://repo.mysql.com/RPM-GPG-KEY-mysql-2022 | apt-key add -
+	sudo apt-get update
+	sudo apt-get install mysql-client
+
+4.	wget https://dev.mysql.com/get/mysql-apt-config_0.8.28-1_all.deb
+	sudo dpkg -i mysql-apt-config_0.8.28-1_all.deb
+	sudo dpkg -r mysql-apt-config
